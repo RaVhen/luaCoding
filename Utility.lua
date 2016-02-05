@@ -27,6 +27,9 @@ local frame = {
 	["Boss1TargetFrame"] = {
 		position = {"CENTER",UIParent,"CENTER", 800, 125};
 		scale = 0.75},
+	["ScenarioBlocksFrame"] = {
+		position = {"TOPRIGHT",MinimapCluster,"BOTTOMRIGHT", -10, 0};
+		scale = 0.75},
 };
 
 PlayerHitIndicator:SetText(nil) 
@@ -143,30 +146,43 @@ PartyMemberFrame3:SetScale(frame["PartyMemberFrame1"].scale)
 PartyMemberFrame4:SetScale(frame["PartyMemberFrame1"].scale)
 
 -- BOSS FRAME
--- Boss1TargetFrame:ClearAllPoints()
--- Boss1TargetFrame:SetPoint(unpack(frame["Boss1TargetFrame"].position))
--- Boss1TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
--- Boss1TargetFrame.SetPoint = function() end
+Boss1TargetFrame:ClearAllPoints()
+Boss1TargetFrame:SetPoint(unpack(frame["Boss1TargetFrame"].position))
+Boss1TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
+Boss1TargetFrame.SetPoint = function() end
 
--- Boss2TargetFrame:ClearAllPoints()
--- Boss2TargetFrame:SetPoint("CENTER", Boss1TargetFrame, "CENTER", 0, -125)
--- Boss2TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
--- Boss2TargetFrame.SetPoint = function() end
+Boss2TargetFrame:ClearAllPoints()
+Boss2TargetFrame:SetPoint("CENTER", Boss1TargetFrame, "CENTER", 0, -125)
+Boss2TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
+Boss2TargetFrame.SetPoint = function() end
 
--- Boss3TargetFrame:ClearAllPoints()
--- Boss3TargetFrame:SetPoint("CENTER", Boss2TargetFrame, "CENTER", 0, -125)
--- Boss3TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
--- Boss3TargetFrame.SetPoint = function() end
+Boss3TargetFrame:ClearAllPoints()
+Boss3TargetFrame:SetPoint("CENTER", Boss2TargetFrame, "CENTER", 0, -125)
+Boss3TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
+Boss3TargetFrame.SetPoint = function() end
 
--- Boss4TargetFrame:ClearAllPoints()
--- Boss4TargetFrame:SetPoint("CENTER", Boss3TargetFrame, "CENTER", 0, -125)
--- Boss4TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
--- Boss4TargetFrame.SetPoint = function() end
+Boss4TargetFrame:ClearAllPoints()
+Boss4TargetFrame:SetPoint("CENTER", Boss3TargetFrame, "CENTER", 0, -125)
+Boss4TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
+Boss4TargetFrame.SetPoint = function() end
 
--- Boss5TargetFrame:ClearAllPoints()
--- Boss5TargetFrame:SetPoint("CENTER", Boss4TargetFrame, "CENTER", 0, -125)
--- Boss5TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
+Boss5TargetFrame:ClearAllPoints()
+Boss5TargetFrame:SetPoint("CENTER", Boss4TargetFrame, "CENTER", 0, -125)
+Boss5TargetFrame:SetScale(frame["Boss1TargetFrame"].scale)
 Boss5TargetFrame.SetPoint = function() end
+
+-- Scenario Block
+ObjectiveTrackerBlocksFrame.ScenarioHeader.Text:Hide()
+ObjectiveTrackerFrame.HeaderMenu.MinimizeButton:Hide()
+ScenarioStageBlock.Stage:Hide()
+ScenarioStageBlock.NormalBG:Hide()
+ScenarioStageBlock.GlowTexture:Hide()
+ScenarioStageBlock.Name:Hide()
+ScenarioStageBlock.Stage:Hide()
+--ObjectiveTrackerFrame:ClearAllPoints()
+ObjectiveTrackerFrame:SetPoint(unpack(frame["ScenarioBlocksFrame"].position))
+ObjectiveTrackerFrame:SetScale(frame["ScenarioBlocksFrame"].scale)
+ObjectiveTrackerFrame.SetPoint = function() end
 
 ---------- // CASTBARS // ----------
 local cbf = "CastingBarFrame"
